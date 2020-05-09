@@ -37,6 +37,8 @@ un service web et une procédure pour envoyé l'image
 une fonction pour récuperer le chemin 
 et les paramètres du serveur web 
 
+tout a été fait par mes soins
+
 DETAIL API REST 
 
 Pour le web service page le format renvoyé est raw le paramètre est l'url et le end point est lorsque le parametre est renvoyé
