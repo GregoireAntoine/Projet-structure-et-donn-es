@@ -8,7 +8,7 @@ var nbmrCouqueRaisins=0
 var nbmrBrioche=0
 var total=0
 var satisfaction=0
-
+var addi=0
 // récuperation des données de la table produit pour le formulaire
 var xhr= new XMLHttpRequest();
 xhr.open('get','GetProduit', true)
@@ -41,10 +41,11 @@ function liste_commande(t){
     nmbrCouqueRaisins=parseFloat(t.couque.value)
     nbmrBrioche=parseFloat(t.brioche.value )
     satisfaction=parseFloat(t.satis.value)
-total= nbmrPain*tabProduit[0].pri+nbmrCroissant*tabProduit[1].pri+nbmrPistolet*tabProduit[2].pri+tabProduit[3].pri*nmbrCouqueRaisins+tabProduit[4].pri*nbmrBrioche
-
+    
+  total= nbmrPain*tabProduit[0].pri+nbmrCroissant*tabProduit[1].pri+nbmrPistolet*tabProduit[2].pri+tabProduit[3].pri*nmbrCouqueRaisins+tabProduit[4].pri*nbmrBrioche
 alert("le total a payer lors de la reception sera de : "+ total +"$")
-
+document.getElementById("page-commande").style.display="none"
+document.getElementById("merci").style.display="block"
 // création de l'url afin de renvoyer les valeurs à la db
 let url = "commander?nom="+nom_client+"&prenom="+prenom_client+"&adresse="+adresse_client+"&pain="+nbmrPain+"&croi="+nbmrCroissant+"&pis="+nbmrPistolet+"&couque="+nmbrCouqueRaisins+"&brioche="+nbmrBrioche+"&satis="+satisfaction
 console.log(url)   
@@ -62,6 +63,7 @@ function lagamme(){
     document.getElementById("page-gamme").style.display="block"
     document.getElementById("page-commande").style.display="none"
     document.getElementById("panier").style.display="none"
+    document.getElementById("merci").style.display="none"
 }
 
 // affiche la page acceuil et fait "disparaitre" les autres
@@ -70,6 +72,7 @@ function fonction_page_acceuil(){
    document.getElementById("page-gamme").style.display="none"
    document.getElementById("page-commande").style.display="none"
    document.getElementById("panier").style.display="none"
+   document.getElementById("merci").style.display="none"
 }
 
 // affiche la page fcommande avec le formulaire et fait "disparaitre" les autres
@@ -78,6 +81,7 @@ function commande_client(){
     document.getElementById("page-gamme").style.display="none"
     document.getElementById("page-commande").style.display="block"
     document.getElementById("panier").style.display="none"
+    document.getElementById("merci").style.display="none"
 }
 
 
@@ -111,3 +115,4 @@ document.getElementById("page-acceuil").style.display="none"
     document.getElementById("panier").style.display="block"
 }
 }
+
