@@ -22,7 +22,7 @@ function makeoptions(){
     compteur=0
     tabProduit=JSON.parse(xhr.responseText)
 // création de la table qui va être mise dans le html
-    while(compteur<5){
+    while(compteur<tabProduit.length){
       document.getElementById(compteur).innerHTML+=tabProduit[compteur].produ+" "+tabProduit[compteur].pri+"$<br>"
         compteur++;
     }
@@ -41,7 +41,8 @@ function liste_commande(t){
     nmbrCouqueRaisins=parseFloat(t.couque.value)
     nbmrBrioche=parseFloat(t.brioche.value )
     satisfaction=parseFloat(t.satis.value)
-  total= nbmrPain+nbmrCroissant+nbmrPistolet+2* nmbrCouqueRaisins+2*nbmrBrioche
+total= nbmrPain*tabProduit[0].pri+nbmrCroissant*tabProduit[1].pri+nbmrPistolet*tabProduit[2].pri+tabProduit[3].pri*nmbrCouqueRaisins+tabProduit[4].pri*nbmrBrioche
+
 alert("le total a payer lors de la reception sera de : "+ total +"$")
 
 // création de l'url afin de renvoyer les valeurs à la db
@@ -50,7 +51,7 @@ console.log(url)
  xhr= new XMLHttpRequest()
 xhr.open("get",url)
 xhr.send()
-
+event.preventDefault()
 }
 
 
