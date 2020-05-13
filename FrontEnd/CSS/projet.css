@@ -77,6 +77,28 @@ font-family:  "PT Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira 
 #page-gamme{
     display:none;
 }
+#photov{
+    height: 4em;
+    width: 4.5em;
+    margin-left:50%;
+    transform: translate(-50%,0);
+}
+
+#merci{
+    padding-top: 10%;
+    display:none;
+    border: none;
+    font-size: 3em;
+background-color: white;
+font-family:  "PT Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    letter-spacing: normal;
+    line-height: 1;
+    color: black;
+    height: 2.5em;
+    text-align: center;
+    font-weight:bold;
+
+}
 #page-commande{
     display: block;
 }
