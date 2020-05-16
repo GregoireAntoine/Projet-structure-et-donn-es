@@ -64,6 +64,7 @@ function lagamme(){
     document.getElementById("page-commande").style.display="none"
     document.getElementById("panier").style.display="none"
     document.getElementById("merci").style.display="none"
+    document.getElementById("pascommande").style.display="none"
 }
 
 // affiche la page acceuil et fait "disparaitre" les autres
@@ -73,6 +74,7 @@ function fonction_page_acceuil(){
    document.getElementById("page-commande").style.display="none"
    document.getElementById("panier").style.display="none"
    document.getElementById("merci").style.display="none"
+   document.getElementById("pascommande").style.display="none"
 }
 
 // affiche la page fcommande avec le formulaire et fait "disparaitre" les autres
@@ -82,6 +84,7 @@ function commande_client(){
     document.getElementById("page-commande").style.display="block"
     document.getElementById("panier").style.display="none"
     document.getElementById("merci").style.display="none"
+    document.getElementById("pascommande").style.display="none"
 }
 
 
@@ -108,11 +111,28 @@ retour=JSON.parse(xhr.responseText)
 console.log(retour)
 
 // Création du tableau de la commande de l'utilisateur
+if(retour[0].PainChocolat==null && retour[0].Croissant==null && retour[0].Pistolet==null &&retour[0].CouqueRaisins==null &&   retour[0].Brioche==null)
+
+{document.getElementById("pascommande").style.display="block"
+document.getElementById("page-acceuil").style.display="none"
+    document.getElementById("page-gamme").style.display="none"
+    document.getElementById("page-commande").style.display="none"
+    document.getElementById("panier").style.display="none"
+    document.getElementById("merci").style.display="none"
+
+}
+
+
+else{
+
+
 document.getElementById("panier").innerHTML='<h2>Votre commande</h2><br> quantit&eacute de Pain au chocolat :'+retour[0].PainChocolat+'<br><br> quantit&eacute de Croissants :'+retour[0].Croissant+'<br><br> quantit&eacute de Pistolets :'+retour[0].Pistolet+'<br><br> quantit&eacute de Couque au raisins :'+retour[0].CouqueRaisins+'<br><br> quantit&eacute de Brioche :'+retour[0].Brioche
 document.getElementById("page-acceuil").style.display="none"
     document.getElementById("page-gamme").style.display="none"
     document.getElementById("page-commande").style.display="none"
     document.getElementById("panier").style.display="block"
+    document.getElementById("pascommande").style.display="none"
+    document.getElementById("merci").style.display="none"}
 }
 }
 
