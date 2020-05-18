@@ -135,4 +135,3 @@ document.getElementById("page-acceuil").style.display="none"
     document.getElementById("merci").style.display="none"}
 }
 }
-
