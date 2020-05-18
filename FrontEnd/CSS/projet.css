@@ -85,8 +85,7 @@ font-family:  "PT Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira 
 }
 
 #merci{
-    padding-top: 10%;
-    min-height :14em;
+    padding-top: 5%;
     display:none;
     border: none;
     font-size: 3em;
