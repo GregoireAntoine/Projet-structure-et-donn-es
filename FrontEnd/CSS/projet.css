@@ -3,6 +3,7 @@ body{
     
 }
 #tete{
+
     font-family:  "PT Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     font-weight:bold;
     letter-spacing: normal;
@@ -16,6 +17,7 @@ body{
 }
 #tete:hover{
     color: rgb(228, 165, 83);
+    cursor:pointer;
 }
 #titre {
     font-size: 0.6em;
@@ -43,7 +45,9 @@ body{
     background-color: white;
     height: 1.4em;
 }
-
+#gamme{
+    margin-top:0.4rem;
+}
 #commande, #gamme{
 border: none;
 
@@ -70,6 +74,7 @@ font-family:  "PT Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira 
     font-size:0.49em;
 }
 #commande:hover, #gamme:hover{
+    cursor: pointer;
     font-size:0.5em;
     color: rgb(228, 165, 83);
     background: white;
@@ -115,6 +120,7 @@ font-family:  "PT Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira 
     font-weight:bold;
 }
 #commanderpascommande:hover{
+    cursor: pointer;
     opacity: 0.5;
    
 }
@@ -302,6 +308,10 @@ font-family:  "PT Sans","Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira 
    
     background-color: white;
     font-size: 1em;}
+    input:hover{
+        cursor: pointer;
+    }
     #submit:hover,#reset:hover{
+        cursor: pointer;
         color: rgb(228, 165, 83);
     }
